@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minha Landing Page</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="navbar">
+        <h2>MinhaMarca</h2>
+        <a href="#contato" class="nav-button">Contato</a>
+      </nav>
+
+      <section class="hero-content">
+        <h1>Crie sua presença digital com simplicidade</h1>
+        <p>
+          Uma landing page feita com Python, Flask e muito aprendizado prático.
+        </p>
+        <a href="#contato" class="primary-button">Começar agora</a>
+      </section>
+    </header>
+
+    <main>
+      <section class="benefits">
+        <h2>Por que este projeto?</h2>
+
+        <div class="cards">
+          <div class="card">
+            <h3>Python na prática</h3>
+            <p>Você aprende criando um projeto real do início ao fim.</p>
+          </div>
+
+          <div class="card">
+            <h3>Projeto publicável</h3>
+            <p>Ao final, sua landing page estará online na Vercel.</p>
+          </div>
+
+          <div class="card">
+            <h3>Base para evoluir</h3>
+            <p>
+              Depois você pode adicionar formulário real, banco de dados e
+              automações.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contato" class="contact">
+        <h2>Entre em contato</h2>
+
+        <form method="POST">
+          <input type="text" name="nome" placeholder="Seu nome" required />
+          <input type="email" name="email" placeholder="Seu e-mail" required />
+          <textarea
+            name="mensagem"
+            placeholder="Sua mensagem"
+            required
+          ></textarea>
+          <button type="submit">Enviar mensagem</button>
+        </form>
+
+        {% if mensagem %}
+        <p class="success-message">{{ mensagem }}</p>
+        {% endif %}
+      </section>
+    </main>
+  </body>
+</html>
