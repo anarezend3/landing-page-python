@@ -21,7 +21,7 @@
           <a href="#contato">Contato</a>
         </div>
 
-        <a href="#contato" class="nav-button">Vamos conversar</a>
+        <a href="https://wa.me/5538999438777" target="_blank" class="nav-button">Vamos conversar</a>
       </nav>
     </header>
 
@@ -191,26 +191,34 @@
       </section>
 
       <section id="contato" class="contact">
-        <div class="contact-text">
-          <p class="small-title">Contato</p>
-          <h2>Envie uma mensagem</h2>
-          <p>
-            Por enquanto, o formulário registra a mensagem no projeto. Depois
-            podemos integrar com WhatsApp, e-mail ou banco de dados.
-          </p>
+    <div class="contact-text">
+        <p class="small-title">Contato</p>
+        <h2>Vamos conversar?</h2>
+        <p>
+            Entre em contato para trocar ideias sobre projetos, acompanhar minha evolução
+            ou propor uma solução digital.
+        </p>
+
+        <div class="contact-links">
+            <a href="mailto:analu.reszende@gmail.com">analu.reszende@gmail.com</a>
+            <a href="https://wa.me/5538999438777" target="_blank">WhatsApp: (38) 99943-8777</a>
+            <a href="https://github.com/anarezend3" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/analurezende/" target="_blank">LinkedIn</a>
         </div>
+    </div>
 
-        <form method="POST" class="contact-form">
-          <input type="text" name="nome" placeholder="Nome" required />
-          <input type="email" name="email" placeholder="E-mail" required />
-          <textarea name="mensagem" placeholder="Mensagem" required></textarea>
-          <button type="submit">Enviar</button>
+    <form method="POST" class="contact-form">
+        <input type="text" name="nome" placeholder="Nome" required />
+        <input type="email" name="email" placeholder="E-mail" required />
+        <textarea name="mensagem" placeholder="Mensagem" required></textarea>
+        <button type="submit">Enviar</button>
 
-          {% if mensagem %}
-          <p class="success-message">{{ mensagem }}</p>
-          {% endif %}
-        </form>
-      </section>
+        {% if mensagem %}
+            <p class="success-message">{{ mensagem }}</p>
+        {% endif %}
+    </form>
+</section>
+
     </main>
 
     <footer class="site-footer">
@@ -236,13 +244,13 @@
           <span>CSS</span>
         </div>
 
-        <div>
-          <h4>Contato</h4>
-          <span>GitHub</span>
-          <span>LinkedIn</span>
-          <span>E-mail</span>
-        </div>
-      </div>
+        
+        <div class="hero-social">
+    <a href="https://github.com/anarezend3" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/analurezende/" target="_blank">LinkedIn</a>
+    <a href="mailto:analu.reszende@gmail.com">E-mail</a>
+    <a href="https://wa.me/5538999438777" target="_blank">WhatsApp</a>
+</div>
 
       <div class="footer-bottom">
         <span>© 2026 ALR Desenvolvimentos</span>
