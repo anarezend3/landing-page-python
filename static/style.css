@@ -108,6 +108,19 @@ a {
   color: #ffffff;
   font-size: 12px;
   font-weight: 700;
+  z-index: 3;
+}
+
+.hero-social a {
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-social a:hover {
+  text-decoration: underline;
 }
 
 .hero-content {
@@ -150,6 +163,13 @@ a {
   line-height: 1.7;
 }
 
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
 .primary-button,
 .secondary-button {
   display: inline-block;
@@ -164,6 +184,16 @@ a {
   transition:
     transform 0.2s ease,
     background-color 0.2s ease;
+}
+
+.primary-button,
+.secondary-button,
+.nav-button,
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .primary-button {
@@ -193,8 +223,10 @@ a {
 .visual-card {
   position: absolute;
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-end;
   border: 1px solid rgba(17, 17, 17, 0.3);
   background: linear-gradient(135deg, #f7f4ef, #b9b3aa);
   color: #111111;
@@ -202,7 +234,11 @@ a {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 1px;
-  padding-bottom: 20px;
+  padding-bottom: 22px;
+}
+
+.visual-card i {
+  font-size: 30px;
 }
 
 .visual-card-one {
@@ -281,28 +317,20 @@ a {
   border: 1px solid #111111;
 }
 
-.service-image {
-  height: 210px;
-  border-bottom: 1px solid #111111;
-  border-radius: 160px 160px 0 0;
+.service-icon {
+  width: 120px;
+  height: 120px;
+  margin: 34px auto 0;
+  border: 1px solid #111111;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffffff, #b7b7b7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.image-one {
-  background:
-    radial-gradient(circle at 50% 30%, #ffffff 0 8%, transparent 9%),
-    linear-gradient(135deg, #f8f8f8, #b7b7b7);
-}
-
-.image-two {
-  background:
-    radial-gradient(circle at 50% 65%, #111111 0 5%, transparent 6%),
-    linear-gradient(135deg, #ececec, #9c9c9c);
-}
-
-.image-three {
-  background:
-    linear-gradient(90deg, transparent 48%, #111111 49%, transparent 51%),
-    linear-gradient(135deg, #ffffff, #bdbdbd);
+.service-icon i {
+  font-size: 36px;
 }
 
 .service-content {
@@ -330,6 +358,12 @@ a {
   letter-spacing: 1px;
 }
 
+.service-content a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .about {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
@@ -355,6 +389,33 @@ a {
   line-height: 1.8;
   max-width: 540px;
   margin-bottom: 28px;
+}
+
+.about-points {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0 0 28px;
+}
+
+.about-points span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.about-points i {
+  width: 22px;
+  height: 22px;
+  background-color: #111111;
+  color: #ffffff;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
 }
 
 .about-image {
@@ -405,31 +466,16 @@ a {
 .project-image {
   height: 190px;
   border: 1px solid #111111;
-  background-color: #ffffff;
-}
-
-.project-one {
   background:
-    linear-gradient(90deg, transparent 49%, #111111 50%, transparent 51%),
+    radial-gradient(circle at 50% 42%, #ffffff 0 15%, transparent 16%),
     linear-gradient(135deg, #ffffff, #b7b7b7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.project-two {
-  background:
-    radial-gradient(circle at 70% 30%, #111111 0 4%, transparent 5%),
-    linear-gradient(135deg, #e9e9e9, #a8a8a8);
-}
-
-.project-three {
-  background:
-    repeating-linear-gradient(90deg, #111111 0 1px, transparent 1px 34px),
-    linear-gradient(135deg, #ffffff, #b8b8b8);
-}
-
-.project-four {
-  background:
-    radial-gradient(circle at center, #f7f7f7 0 18%, transparent 19%),
-    linear-gradient(135deg, #d8d8d8, #ffffff);
+.project-image i {
+  font-size: 44px;
 }
 
 .project-info {
@@ -517,6 +563,27 @@ a {
 .contact-text p {
   max-width: 520px;
   line-height: 1.8;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.contact-links a {
+  color: #111111;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-links a:hover {
+  text-decoration: underline;
 }
 
 .contact-form {
